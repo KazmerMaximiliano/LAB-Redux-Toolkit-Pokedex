@@ -1,0 +1,225 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000;
+}
+
+.pokedex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.pokedex .panel-left {
+  width: 50%;
+  max-width: 600px;
+  height: 100vh;
+}
+
+.pokedex .top-decoration {
+  background-color: #f50606;
+  width: 100%;
+  height: 10vh;
+}
+
+.pokedex .top-decoration .black-fix {
+  background-color: #000;
+  width: 50%;
+  max-width: 600px;
+  height: 10vh;
+  position: absolute;
+  border-radius: 0 0 10vh 0;
+}
+
+.pokedex .loading-container {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokedex .panel-left .content {
+  background-color: #f50606;
+  width: 100%;
+  height: 90vh;
+  border-radius: 10vh 0 0 0;
+  padding: 12vh 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-left .content .screen {
+  width: 100%;
+  max-width: 450px;
+  background-color: #b0b0b0;
+  padding: 24px;
+  border-radius: 24px;
+  border: 2px solid #000;
+}
+
+.panel-left .content .screen .screen-image {
+  width: 100%;
+  min-height: 250px;
+  background-color: #fcfafd;
+  padding: 16px;
+  border-radius: 24px;
+  border: 2px solid #000;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen-image img {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.panel-left .content .screen .screen-title {
+  width: 100%;
+  font-weight: bold;
+  padding: 0px 16px;
+  font-size: 18px;
+}
+
+.panel-left .content .screen .screen-text {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+}
+
+.pokedex .panel-right {
+  width: 50%;
+  max-width: 600px;
+  height: 100vh;
+}
+
+.pokedex .panel-right .content {
+  background-color: #f50606;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  padding: 22vh 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 8px solid #3e3e3e;
+}
+
+.pokedex .panel-right .content .buttons-container {
+  width: 100%;
+  max-width: 450px;
+  background-color: #2767fc;
+  padding: 24px;
+  border-radius: 24px;
+  border: 2px solid #000;
+}
+
+.buttons-container .buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.buttons-grid button {
+  width: 100%;
+  height: 90px;
+  border-radius: 8px;
+  border: 2px solid #000;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #4e9bfc;
+}
+
+.buttons-grid button:hover {
+  background-color: #6cacfa;
+}
+
+.buttons-grid button img {
+  width: 100%;
+  height: 100%;
+}
+
+.pagination {
+  width: 100%;
+  margin-top: 24px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination .page-number {
+  font-weight: bold;
+  font-size: 24px;
+  color: #fff;
+  margin: 0px 24px;
+}
+
+.pagination .prev-button {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-right: 30px solid #4e9bfc;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+
+.pagination .next-button {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 30px solid #4e9bfc;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .pokedex {
+    flex-direction: column;
+  }
+  .pokedex .top-decoration {
+    height: 0;
+  }
+  .pokedex .top-decoration .black-fix {
+    height: 0;
+  }
+  .pokedex .panel-left {
+    width: 100%;
+    height: 50vh;
+  }
+  .pokedex .panel-left .content {
+    height: 50vh;
+    padding: 32px;
+  }
+  .pokedex .panel-right {
+    width: 100%;
+    height: 50vh;
+  }
+  .pokedex .panel-right .content {
+    height: 50vh;
+    padding: 32px;
+    border-left: none;
+    border-top: 8px solid #3e3e3e;
+    overflow: hidden;
+  }
+}
