@@ -222,4 +222,7 @@ body {
     border-top: 8px solid #3e3e3e;
     overflow: hidden;
   }
+  .buttons-container .buttons-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
